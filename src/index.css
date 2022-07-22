@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 code {
@@ -207,6 +208,7 @@ code {
   .movie-card {
     width: 60%;
   }
+
   .footer {
     position: fixed;
     flex-shrink: 0;
@@ -225,6 +227,9 @@ code {
 
 /* Portrait phones and smaller */
 @media (max-width: 480px) {
+  /* #root {
+    width: 150%;
+  } */
   .movie-card {
     width: 50%;
   }
