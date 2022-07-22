@@ -1,6 +1,6 @@
 import React from "react";
 import "../App.css";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import TrailerComp from "../components/trailerComp";
 import data from "../data";
 

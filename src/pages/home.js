@@ -1,15 +1,11 @@
 import "../App.css";
-import { useState, useEffect } from "react";
-import Navbar from "../components/navbar";
+import { useState } from "react";
 import MovieCard from "../components/moviecard";
 import Filter from "../components/filter";
 import data from "../data";
-import Footer from "../components/footer";
 import React from "react";
 import NewMovie from "../components/newmovie";
 import SearchBar from "../components/searchBar";
-import { Link } from "react-router-dom";
-
 
 function Home() {
   const movieElements = data.map((val) => (
@@ -20,9 +16,9 @@ function Home() {
   const [checkBox, setCheckBox] = useState({ isSelected: "" });
 
   function filterMovies(event) {
-    const { value, checked, name } = event.target;
+    const { value, checked } = event.target;
     const filtered = data.filter(
-      (el) => el.rating == value || value.includes(el.title.charAt(0))
+      (el) => el.rating === value || value.includes(el.title.charAt(0))
     );
     setCheckBox({ isSelected: value });
     console.log(filtered);
